@@ -1,17 +1,10 @@
-var colors = [
-	'rgb(255, 0, 0)',
-	'rgb(255, 255, 0)',
-	'rgb(0, 255, 0)',
-	'rgb(0, 255, 255)',
-	'rgb(0, 0, 255)',
-	'rgb(255, 0, 255)'
-];
+var colors = generateRandArrayColors(6);
 
 var backgroundColor = document.body.style.background;
 var rgbDisplay = document.querySelector('h2');
 var cards = document.querySelectorAll('.card');
 var resultDisplay = document.getElementById('result');
-var targetColor = pickRandColor();
+var targetColor = pickRandTargetColor();
 
 rgbDisplay.textContent = targetColor;
 
@@ -42,7 +35,30 @@ function changeColors(color) {
 	}
 }
 
-function pickRandColor() {
+function pickRandTargetColor() {
 	let random = Math.floor(Math.random() * colors.length);
 	return colors[random];
+}
+
+function generateRandArrayColors(num) {
+	// Make array
+	var array = [];
+	// Add num random colors to array
+	for (let i = 0; i < num; i++) {
+		array.push(generateRandColor());
+	}
+	// return array
+	return array;
+}
+
+// Generates a random RGB color
+function generateRandColor() {
+	let RGBstr = 'rgb(';
+	RGBstr += String(Math.floor(Math.random() * 256)); // R
+	RGBstr += ', ';
+	RGBstr += String(Math.floor(Math.random() * 256)); // G
+	RGBstr += ', ';
+	RGBstr += String(Math.floor(Math.random() * 256)); // B
+	RGBstr += ')';
+	return RGBstr;
 }
