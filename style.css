@@ -24,6 +24,9 @@ h2 {
 	max-width: 500px;
 }
 
-#result {
-	color: #fff;
+#strip {
+	background: #fff;
+	height: 23px;
+	text-align: center;
+	color: black;
 }
