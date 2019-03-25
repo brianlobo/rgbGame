@@ -1,15 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Sanchez');
+
 body {
 	background-color: #232323;
+	margin: 0;
+	font-family: 'Sanchez', serif;
 }
 
 h1 {
+	font-size: 5em;
 	color: #faebd7;
 	text-align: center;
+	background-color: steelblue;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 h2 {
+	font-size: 3em;
 	color: #fff;
 	text-align: center;
+	background-color: steelblue;
+	padding-bottom: 30px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+button {
+	letter-spacing: 1px;
+	font-size: 1.5em;
+	font-family: 'Sanchez', serif;
+	border: none;
+	background: none;
+	height: 100%;
+	transition: all .30s;
+	outline: none;
+	-webkit-transition: all .30s;
+	-moz-transition: all .30s;
+}
+
+button:hover {
+	color: white;
+	background-color: steelblue;
 }
 
 .card {
@@ -17,16 +48,32 @@ h2 {
 	padding-bottom: 30%;
 	float: left;
 	margin: 1.66%;
+	border-radius: 10%;
+	transition: background .40s;
+	-webkit-transition: background .40s;
+	-moz-transition: background .40s;
+}
+
+.selected {
+	background-color: steelblue;
+	color: white;
 }
 
 #container {
 	margin: 0 auto;
-	max-width: 500px;
+	max-width: 750px;
 }
 
 #strip {
+	margin-bottom: 20px;
 	background: #fff;
-	height: 23px;
+	height: 40px;
 	text-align: center;
 	color: black;
+}
+
+#result {
+	display: inline-block;
+	width: 20%;
+	font-size: 1.5em;
 }
